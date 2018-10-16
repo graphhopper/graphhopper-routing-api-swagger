@@ -27,13 +27,16 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * A found path
  */
 @ApiModel(description = "A found path")
 
-public class RouteResponsePath {
+public class RouteResponsePath implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("distance")
   private Double distance = null;
 

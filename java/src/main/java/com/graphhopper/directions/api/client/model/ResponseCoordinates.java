@@ -24,12 +24,15 @@ import com.graphhopper.directions.api.client.model.ResponseCoordinatesArray;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * ResponseCoordinates
  */
 
-public class ResponseCoordinates {
+public class ResponseCoordinates implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("coordinates")
   private ResponseCoordinatesArray coordinates = null;
 

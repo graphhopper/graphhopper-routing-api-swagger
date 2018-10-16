@@ -26,12 +26,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * IsochroneResponsePolygonGeometry
  */
 
-public class IsochroneResponsePolygonGeometry {
+public class IsochroneResponsePolygonGeometry implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("type")
   private String type = null;
 

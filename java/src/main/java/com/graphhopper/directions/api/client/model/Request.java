@@ -33,12 +33,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * Request
  */
 
-public class Request {
+public class Request implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("vehicles")
   private List<Vehicle> vehicles = null;
 

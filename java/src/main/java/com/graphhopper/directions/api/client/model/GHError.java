@@ -26,12 +26,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * GHError
  */
 
-public class GHError {
+public class GHError implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("code")
   private Integer code = null;
 

@@ -23,12 +23,15 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * IsochroneResponsePolygonProperties
  */
 
-public class IsochroneResponsePolygonProperties {
+public class IsochroneResponsePolygonProperties implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("bucket")
   private Integer bucket = null;
 

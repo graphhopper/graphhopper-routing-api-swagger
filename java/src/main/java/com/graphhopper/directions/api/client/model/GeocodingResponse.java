@@ -26,12 +26,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * GeocodingResponse
  */
 
-public class GeocodingResponse {
+public class GeocodingResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("hits")
   private List<GeocodingLocation> hits = null;
 

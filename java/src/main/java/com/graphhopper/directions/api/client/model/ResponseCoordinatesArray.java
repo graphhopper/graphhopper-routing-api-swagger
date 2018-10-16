@@ -18,13 +18,16 @@ import java.util.Arrays;
 import io.swagger.annotations.ApiModel;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * An array containing coordinates
  */
 @ApiModel(description = "An array containing coordinates")
 
-public class ResponseCoordinatesArray extends ArrayList<List> {
+public class ResponseCoordinatesArray extends ArrayList<List> implements Serializable {
+  private static final long serialVersionUID = 1L;
+
 
   @Override
   public boolean equals(java.lang.Object o) {

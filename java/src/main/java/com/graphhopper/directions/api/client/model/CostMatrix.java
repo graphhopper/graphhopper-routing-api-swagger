@@ -26,12 +26,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * CostMatrix
  */
 
-public class CostMatrix {
+public class CostMatrix implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   /**
    * type of cost matrix, currently default or google are supported
    */

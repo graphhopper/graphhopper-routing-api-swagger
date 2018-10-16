@@ -25,12 +25,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * RoutePoint
  */
 
-public class RoutePoint {
+public class RoutePoint implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("type")
   private String type = null;
 

@@ -24,12 +24,15 @@ import com.graphhopper.directions.api.client.model.GeocodingPoint;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * GeocodingLocation
  */
 
-public class GeocodingLocation {
+public class GeocodingLocation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("point")
   private GeocodingPoint point = null;
 

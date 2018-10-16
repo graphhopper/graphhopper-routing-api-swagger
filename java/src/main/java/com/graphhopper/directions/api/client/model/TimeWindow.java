@@ -23,12 +23,15 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * TimeWindow
  */
 
-public class TimeWindow {
+public class TimeWindow implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("earliest")
   private Long earliest = null;
 

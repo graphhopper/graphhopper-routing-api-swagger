@@ -19,13 +19,16 @@ import com.graphhopper.directions.api.client.model.ResponseInstruction;
 import io.swagger.annotations.ApiModel;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * Contains information about the instructions for this route. The last instruction is always the Finish instruction and takes 0ms and 0meter. Keep in mind that instructions are currently under active development and can sometimes contain misleading information, so, make sure you always show an image of the map at the same time when navigating your users!
  */
 @ApiModel(description = "Contains information about the instructions for this route. The last instruction is always the Finish instruction and takes 0ms and 0meter. Keep in mind that instructions are currently under active development and can sometimes contain misleading information, so, make sure you always show an image of the map at the same time when navigating your users!")
 
-public class ResponseInstructions extends ArrayList<ResponseInstruction> {
+public class ResponseInstructions extends ArrayList<ResponseInstruction> implements Serializable {
+  private static final long serialVersionUID = 1L;
+
 
   @Override
   public boolean equals(java.lang.Object o) {

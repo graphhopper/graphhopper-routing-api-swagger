@@ -26,13 +26,16 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * JSON data of matrix response
  */
 @ApiModel(description = "JSON data of matrix response")
 
-public class CostMatrixData {
+public class CostMatrixData implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("times")
   private List<List<Long>> times = null;
 

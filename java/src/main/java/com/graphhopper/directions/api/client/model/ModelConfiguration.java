@@ -24,12 +24,15 @@ import com.graphhopper.directions.api.client.model.Routing;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * ModelConfiguration
  */
 
-public class ModelConfiguration {
+public class ModelConfiguration implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("routing")
   private Routing routing = null;
 

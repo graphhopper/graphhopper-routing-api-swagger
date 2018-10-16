@@ -27,12 +27,15 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * MatrixResponse
  */
 
-public class MatrixResponse {
+public class MatrixResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("distances")
   private List<List<BigDecimal>> distances = null;
 

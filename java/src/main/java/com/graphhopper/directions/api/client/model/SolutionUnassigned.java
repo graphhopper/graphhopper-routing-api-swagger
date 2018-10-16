@@ -26,12 +26,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  * SolutionUnassigned
  */
 
-public class SolutionUnassigned {
+public class SolutionUnassigned implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("services")
   private List<String> services = null;
 

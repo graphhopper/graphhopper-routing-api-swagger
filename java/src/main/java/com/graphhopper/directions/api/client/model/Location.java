@@ -23,12 +23,15 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * Location
  */
 
-public class Location {
+public class Location implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("lon")
   private Double lon = null;
 

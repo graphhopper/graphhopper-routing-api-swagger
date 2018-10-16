@@ -25,13 +25,16 @@ import com.graphhopper.directions.api.client.model.IsochroneResponsePolygonPrope
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * A found path
  */
 @ApiModel(description = "A found path")
 
-public class IsochroneResponsePolygon {
+public class IsochroneResponsePolygon implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @SerializedName("properties")
   private IsochroneResponsePolygonProperties properties = null;
 
